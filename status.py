@@ -26,3 +26,4 @@ if __name__=='__main__':
         p.apply_async(openurl,args=(x,))
     p.close()
     p.join()
+    print len(data)
