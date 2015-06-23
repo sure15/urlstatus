@@ -14,6 +14,8 @@ def openurl(url):
     try:
         connection=urllib2.urlopen(url)
         print connection.getcode(),url
+        if len(connection.read()) < 5000:
+            print 'failed'+url
         connection.close()
     except:
         print 'failed,%s.' % url
